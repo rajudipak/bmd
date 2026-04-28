@@ -1,0 +1,318 @@
+1.   Apply awk command on suitable data and describe commands.
+
+
+
+cat > student.txt
+
+1 Rahul 70
+2 Amul  89
+3 Neha  99
+4 Leon   90
+
+CTRL + D (Saved)
+
+
+Check File:
+
+cat student.txt
+
+O/p = data
+
+
+
+
+// Commands Execution now begins.....
+
+Print all records:
+
+awk '{print}' student.txt
+
+Print names only:
+
+awk '{print $2}' student.txt
+
+Print marks > 90:
+
+awk '$3>90 {print $2,$3}' student.txt
+
+Explanation
+$1 = ID
+$2 = Name
+$3 = Marks
+
+
+************************************************************************************************************************************************
+
+
+2.  Demonstrate cp command through system call.
+
+
+
+cat > a.txt
+
+(ENTER)
+
+Hello Linux
+
+(ENTER)
+
+CTRL + D 
+
+(ENTER)
+
+cp a.txt b.txt
+
+(ENTER)
+
+cat b.txt
+
+(ENTER)
+
+O/P:
+
+
+Explanation:
+
+cp source destination
+
+************************************************************************************************************************************************
+
+
+3.  Demonstrate and describe process-related commands.
+
+
+sleep 100 &
+
+(ENTER)
+
+ps
+
+(ENTER)
+
+top
+
+
+To exit top:
+
+(PRESS q)
+
+kill 1234
+
+
+******(ANOTHER SHORTCUT EX)******
+
+sleep 100 &
+ps
+kill 4321
+ps
+
+
+Explanation:
+ps = process status
+top = running processes
+kill = terminate process
+
+
+
+************************************************************************************************************************************************
+
+
+4.Demonstrate and describe grep command using suitable data.
+
+
+
+cat > fruit.txt
+
+(ENTER)
+
+Mango
+Banana
+Apple Juice
+Orange
+Apple
+
+
+CTRL + D (Saved)
+
+
+Check File:
+
+cat fruit.txt
+
+O/p = data
+
+
+
+
+// Commands :
+
+Search:
+
+grep "Apple" fruit.txt
+
+(ENTER)
+
+
+Ignore case:
+
+grep -i "apple" fruit.txt
+
+
+Line number:
+
+grep -n "Apple" fruit.txt
+
+
+
+************************************************************************************************************************************************
+
+
+5. Demonstrate and describe chmod, adduser, pwd commands. 
+
+
+
+A   chmod
+Important:
+
+chmod needs an existing file or folder.
+
+
+So 
+
+First create file:
+
+touch demo.txt
+
+Then:
+
+chmod 777 demo.txt
+
+After chmod:
+
+ls -l demo.txt
+
+
+
+B.   adduser
+
+
+sudo adduser student1
+
+
+C.  pwd
+
+pwd
+
+
+
+
+Explanation:
+chmod = permission
+adduser = create user
+pwd = current path
+
+
+
+
+************************************************************************************************************************************************
+
+
+
+6. Demonstrate and describe chmod and chown commands. 
+
+
+
+
+
+A.   chmod
+
+
+chmod needs an existing file or folder.
+
+
+So 
+
+First create file:
+
+touch demo.txt
+
+Then:
+
+chmod 777 demo.txt
+
+
+
+
+B.   chown
+
+
+
+Additional Setup :
+
+
+1. demo.txt must exist
+
+Create if needed:
+
+touch demo.txt
+
+
+2. user1 must exist
+
+Create:
+
+sudo adduser user1
+
+
+3. check
+
+ls -l demo.txt
+
+
+Now actual Command Execution :
+
+
+sudo chown user1 demo.txt
+
+ls -l demo.txt
+
+Explanation:
+chmod = permissions
+chown = owner
+
+
+************************************************************************************************************************************************
+
+
+
+7. Implementation of file managing operations.
+
+
+
+Direct Commands:
+
+Create file:
+
+touch file.txt
+
+Create folder:
+
+mkdir myfolder
+
+List:
+
+ls
+
+Rename:
+
+mv file.txt newfile.txt
+
+Delete file:
+
+rm newfile.txt
+
+Delete folder:
+
+rmdir myfolder
+
+
